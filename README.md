@@ -581,3 +581,53 @@ console.log(filtered);
 const sum = numbers.reduce((total, num) => total + num, 0);
 console.log(sum);
 ```
+
+Promises in JavaScript in more detail:
+```javascript
+const event = new Promise((resolve, reject) => {
+    const name = "Mike";
+    if (name === "Mike") {
+        resolve("OK");
+    } else {
+        reject("Error");
+    }
+});
+
+event.then(result => {
+    console.log(result);
+}).catch(error => {
+    console.log(error);
+}).finally(() => {
+    console.log("Promise has been settled (either resolved or rejected)");
+});
+```
+Example usage of the event promise with API:
+```javascript
+const axios = require("axios");
+
+const data = axios.get("https://jsonplaceholder.typicode.com/posts/1");
+data.then(response => {
+    console.log(response.data);
+}).catch(error => {
+    console.error('Error fetching data:', error);
+});
+```
+
+Async/Await with API in JavaScript:
+```javascript
+const axios = require("axios");
+
+const getData = async () => {
+    try {
+        const response = await axios.get("https://jsonplaceholder.typicode.com/posts/1");
+        console.log(response.data);
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    } finally {
+        console.log("Finished attempting to fetch data.");
+    }
+};
+
+getData();
+```
+    

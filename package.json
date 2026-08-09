@@ -1,0 +1,16 @@
+{
+  "name": "javascript-beginner-tutorial",
+  "version": "1.0.0",
+  "description": "A simple `hello-world.js` program: ```javascript console.log(\"Hello, World!\"); ``` Run the program with: ```bash node hello-world.js ``` Embed the `hello-world.js` script in an HTML file: ``` <script src=\"hello-world.js\"></script> ``` Single-line comment: ```javascript // This is a single-line comment ``` Multi-line comment: ```javascript /*  This is a multi-line comment */ ``` Ways to print output in JavaScript: ```javascript console.log(\"Hello, World!\"); console.warn(\"This is a warning message!\"); console.error(\"This is an error message!\"); ```",
+  "main": "hello-world.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}

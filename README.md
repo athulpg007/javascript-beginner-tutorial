@@ -1,6 +1,10 @@
 # javascript-beginner-tutorial
 
-This is a beginner-friendly tutorial for learning JavaScript. You need Visual Studio Code or any other code editor to write JavaScript code. Install Node.js from [https://nodejs.org/](https://nodejs.org/) to run JavaScript code outside the browser. Install npm (Node Package Manager) which comes with Node.js to manage JavaScript packages.
+This is a beginner-friendly tutorial for learning JavaScript. 
+
+JavaScript is a versatile programming language primarily used for frontend web development. It allows you to create interactive and dynamic web pages.
+
+You need Visual Studio Code or any other code editor to write JavaScript code. Install Node.js from [https://nodejs.org/](https://nodejs.org/) to run JavaScript code outside the browser. Verify node installation by running `node -v` in your terminal. Install npm (Node Package Manager) which comes with Node.js to manage JavaScript packages. Verify npm installation by running `npm -v` in your terminal.
 
 A simple `hello-world.js` program:
 ```javascript
@@ -29,6 +33,13 @@ Ways to print output in JavaScript:
 console.log("Hello, World!");
 console.warn("This is a warning message!");
 console.error("This is an error message!");
+```
+
+Declaring variables in JavaScript:
+```javascript
+let x = 10; // block-scoped variable
+const y = 20; // block-scoped constant variable, immutable
+var z = 30; // global or function scoped variable
 ```
 
 Printing out a variable:
@@ -104,6 +115,34 @@ const uniqueId = Symbol("id");
 9. **BigInt**: Represents integers with arbitrary precision.
 ```javascript
 const bigNumber = 1234567890123456789012345678901234567890n;
+```
+
+Examining the type of variables using `typeof` operator:
+```javascript
+const x = 10;
+const y = 3.14;
+const z = "Hello";
+const isTrue = true;
+let d;
+let e = null;
+const f = {
+    name: "John",
+    age: 30,
+};
+const g = [1, 2, 3, 4, 5];
+const i = 1234567890123456789012345678901234567890n;
+
+
+
+console.log(typeof x);
+console.log(typeof y);
+console.log(typeof z);
+console.log(typeof isTrue);
+console.log(typeof d);
+console.log(typeof e);
+console.log(typeof f);
+console.log(typeof g);
+console.log(typeof i);
 ```
 
 Variables in JavaScript can be declared using `var`, `let`, or `const`. Note variable names are case-sensitive and cannot start with a number. and convention is to use camelCase.
@@ -192,6 +231,26 @@ console.log(null || "default"); // "default"
 
 console.log(false && "hello"); // false
 console.log(true && "hello"); // "hello"
+```
+
+Special values in JavaScript:
+1. `undefined`: Represents a variable that has been declared but not assigned a value.
+2. `null`: Represents the intentional absence of any object value.
+3. `Infinity`: Represents positive infinity, a value greater than any other number.
+4. `NaN`: "Not-a-Number", typically the result of an invalid arithmetic operation.
+
+```javascript
+const a = undefined;
+console.log(a);
+
+const b = null;
+console.log(b);
+
+const c = 5 / 0;
+console.log(c);
+
+const d = Math.sqrt(-1);
+console.log(d);
 ```
 
 Conditional statements in JavaScript:
@@ -340,6 +399,23 @@ for (const element of arr) {
 // enumerating array arr.entries()
 for (const [index, element] of arr.entries()) {
     console.log(`index = ${index}, element = ${element}`);
+}
+```
+
+break and continue statements in JavaScript:
+```javascript
+for (let i = 0; i < 5; i++) {
+    if (i === 2) {
+        break; // exits the loop when i is 2
+    }
+    console.log(i);
+}
+
+for (let i = 0; i < 5; i++) {
+    if (i === 2) {
+        continue; // skips the current iteration when i is 2
+    }
+    console.log(i);
 }
 ```
 

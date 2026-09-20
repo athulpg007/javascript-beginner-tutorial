@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <header class="app-header">
+            <h1>Task Tracker</h1>
+            <p>Keep track of what needs doing.</p>
+        </header>
+
+        <section class="task-form-section" aria-labelledby="add-task-heading">
+            <h2 id="add-task-heading">Add a New Task</h2>
+
+            <form id="task-form">
+                <label for="task-input">Task Name</label>
+            
+                <div class="form-row">
+                    <input 
+                      id="task-input"
+                      name="task"
+                      type="text"
+                      placeholder="Enter task name"
+                      required
+                      autocomplete="off"
+                    >
+                    <button type="submit">Add Task</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="task-list-section" aria-labelledby="tasks-heading">
+            <div class="section-heading">
+                <h2 id="tasks-heading">My Tasks</h2>
+                <div class="filters" aria-label="Filter tasks">
+                    <button 
+                        class="filter-button active"
+                        type="button"
+                        data-filter="all"
+                    >
+                    All
+                    </button>
+                    <button 
+                        class="filter-button"
+                        type="button"
+                        data-filter="completed"
+                    >
+                    Completed
+                    </button>
+                    <button 
+                        class="filter-button"
+                        type="button"
+                        data-filter="pending"
+                    >
+                    Pending
+                    </button>
+                </div>
+            </div>
+
+            <ul id="task-list" class="task-list">
+                <!-- Tasks will be dynamically added here -->
+            </ul>
+
+            <p id="empty-message" class="empty-message">
+                No tasks available.
+            </p>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

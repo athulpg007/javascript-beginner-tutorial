@@ -1,5 +1,9 @@
 const numbers = [1, 2, 3, 4, 5];
 
+// for each
+console.log("Using forEach to print each number:");
+numbers.forEach(num => console.log(num));
+
 // map example: doubling each number in the array
 const doubled = numbers.map(num => num * 2);
 console.log(doubled);

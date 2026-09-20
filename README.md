@@ -706,4 +706,42 @@ const getData = async () => {
 
 getData();
 ```
+
+## DOM Manipulation in JavaScript
+
+Single element selectors:
+```javascript
+const myForm = document.getElementById('my-form');
+console.log(myForm);
+
+const container = document.querySelector('.container');
+console.log(container);
+```
+
+Multiple element selectors:
+```javascript
+const items = document.querySelectorAll('.item');
+items.forEach(item => console.log(item));
+```
+
+## Event Listeners in JavaScript
+
+Example of adding a click event listener to a button:
+```javascript
+const btn = document.querySelector('.btn');
+btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    console.log(e);
+});
+```
+
+Changing the background color of the form on button click:
+```javascript
+const btn = document.querySelector('.btn');
+btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const myForm = document.getElementById('my-form');
+    myForm.style.backgroundColor = 'lightblue';
+});
+```
     
